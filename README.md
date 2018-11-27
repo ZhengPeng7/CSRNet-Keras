@@ -39,7 +39,9 @@
 
 ![res_B](images/res_B.png)
 
+| Dataset | Mean_density_map_distance |  MAE   |
+| :-----: | :-----------------------: | :----: |
+|    A    |          264.759          | 73.089 |
+|    B    |          77.987           | 10.610 |
 
-
-### Loss:
 
