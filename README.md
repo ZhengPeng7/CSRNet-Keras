@@ -11,11 +11,35 @@
 
 ### Training:
 
-+ Use Adam(lr=1e-6) as the optimizer.
-+ Batch_size = 1.
++ Use Adam(lr=1e-6) as the **optimizer**.
++ **Batch_size** = 1.
++ **Epoch**_num = 400.
++ **Time** consuming:
+  + On dataset A: 597m-46s on a single TITAN X.
+  + On dataset B: 552m-30s on a single GTX 1080-TI.
++ Do the **validation** on 80 samples randomly selected from the training set.
+
+### Loss:
+
++ On dataset A:
+
+![loss_A](images/loss_A.jpg)
+
++ On dataset B:
+
+![loss_B](images/loss_B.jpg)
 
 ### Experiments on ShanghaiTech dataset:
 
-+ On dataset A(around 200 epochs):
++ On dataset A(by model selected after training 400 epochs):
 
-  ![A](images/A.png)
+  ![res_A](images/res_A.png)
+
++ On dataset B(by model selected after training 400 epochs):
+
+![res_B](images/res_B.png)
+
+
+
+### Loss:
+

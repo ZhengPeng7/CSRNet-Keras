@@ -38,28 +38,22 @@ def gen_x_y(img_paths, train_val_test='train'):
     return x, y, img_paths
 
 
-def eval_loss(model, x, y, dataset='A'):
-    if dataset == 'A':
-        preds = []
-        for i in x:
-            preds.append(np.squeeze(model.predict(i)))
-        labels = []
-        for i in y:
-            labels.append(np.squeeze(i))
-        losses_DMD = []
-        for i in range(len(preds)):
-            losses_DMD.append(np.abs(np.sum(preds[i] - labels[i])))
-        loss_DMD = np.mean(losses_DMD)
-        losses_MAE = []
-        for i in range(len(preds)):
-            losses_MAE.append(np.abs(np.sum(preds[i]) - np.sum(labels[i])))
-        loss_DMD = np.mean(losses_DMD)
-        loss_MAE = np.mean(losses_MAE)
-    else:
-        preds = np.squeeze(model.predict(x))
-        y = np.squeeze(np.asarray(y))
-        loss_DMD = np.mean(np.abs(np.sum(preds - y)))
-        loss_MAE = np.mean(np.abs(np.sum(preds, axis=(1, 2, 3)) - np.sum(y, axis=(1, 2, 3))))
+def eval_loss(model, x, y):
+    preds = []
+    for i in x:
+        preds.append(np.squeeze(model.predict(i)))
+    labels = []
+    for i in y:
+        labels.append(np.squeeze(i))
+    losses_DMD = []
+    for i in range(len(preds)):
+        losses_DMD.append(np.sum(np.abs(preds[i] - labels[i])))
+    loss_DMD = np.mean(losses_DMD)
+    losses_MAE = []
+    for i in range(len(preds)):
+        losses_MAE.append(np.abs(np.sum(preds[i]) - np.sum(labels[i])))
+    loss_DMD = np.mean(losses_DMD)
+    loss_MAE = np.mean(losses_MAE)
     return loss_DMD, loss_MAE
 
 
