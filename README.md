@@ -17,6 +17,7 @@
 + **Time** consuming:
   + On dataset A: 597m-46s on a single TITAN X.
   + On dataset B: 552m-30s on a single GTX 1080-TI.
++ No **fine-tuning**.
 + Do the **validation** on 80 samples randomly selected from the training set.
 
 ### Loss:
