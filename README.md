@@ -9,9 +9,9 @@
 
 ### Results now:
 
-| Dataset | MAE  | RMSE  | Mean of Frobenius Norm | MAPE  | PSNR  | SSIM |
-| :-----: | :--: | :---: | :--------------------: | :---: | :---: | :--: |
-|   SHB   | 8.31 | 14.36 |        1.66e-4         | 6.63% | 29.31 | 0.93 |
+| Dataset | MAE  | RMSE  | Sum of Frobenius Norm | MAPE  | PSNR  | SSIM |
+| :-----: | :--: | :---: | :-------------------: | :---: | :---: | :--: |
+|   SHB   | 8.31 | 14.36 |        5.26e-2        | 6.63% | 29.31 | 0.93 |
 
 ### Dataset:
 
