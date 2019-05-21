@@ -67,10 +67,11 @@ def gen_density_map_gaussian(im, points, sigma=4):
     for idx_p, p in enumerate(points):
         p = np.round(p).astype(int)
         p[0], p[1] = min(h-1, p[1]), min(w-1, p[0])
+        gaussian_radius = sigma * 2 - 1
         if sigma == 4:
             # Adaptive sigma in CSRNet.
             sigma = max(int(np.sum(distances[idx_p][1:4]) * 0.1), 1)
-        gaussian_radius = sigma * 2 - 1
+            gaussian_radius = sigma * 3
         gaussian_map = np.multiply(
             cv2.getGaussianKernel(int(gaussian_radius*2+1), sigma),
             cv2.getGaussianKernel(int(gaussian_radius*2+1), sigma).T

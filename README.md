@@ -9,9 +9,11 @@
 
 ### Results now:
 
-| Dataset | MAE  | RMSE  | Sum of Frobenius Norm | MAPE  | PSNR  | SSIM |
-| :-----: | :--: | :---: | :-------------------: | :---: | :---: | :--: |
-|   SHB   | 8.31 | 14.36 |        5.26e-2        | 6.63% | 29.31 | 0.93 |
+| Dataset | MAE    | RMSE    | Sum of Frobenius Norm | MAPE  | PSNR  | SSIM |
+| :-----: | :----: | :-----: | :-------------------: | :---: | :---: | :--: |
+|   SHB   | 8.31   | 14.36   |        5.26e-2        | 6.63% | 29.31 | 0.93 |
+|   SHB   | 71.238 | 114.748 |        8.65e-1        | 17.3% | 21.46 | 0.61 |
+> Weights can be downloaded in the [release]().
 
 ### Dataset:
 
@@ -27,7 +29,7 @@
 
 4. *Data augmentation*: Flip horizontally online randomly;
 
-7. *Weights*: Got best weights in epoch135(250 epochs in total), and here is the loss records:
+7. *Weights*: Got best weights of SHB in epoch135(250 epochs in total), and here is the loss records:
 
    ![Loss_records](materials/CSRNet_val_loss.png)
 
