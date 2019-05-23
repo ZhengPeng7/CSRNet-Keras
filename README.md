@@ -13,7 +13,7 @@
 | :-----: | :---: | :----: | :-------------------: | :----: | :---: | :--: |
 |   SHB   | 8.31  | 14.36  |        5.26e-2        | 6.63%  | 29.31 | 0.93 |
 |   SHB   | 67.98 | 103.24 |        8.38e-1        | 17.29% | 21.51 | 0.60 |
-> Weights can be downloaded in the [release](https://github.com/ZhengPeng7/CSRNet-Keras/releases/tag/v0.9).
+> Weights can be downloaded in the [release](https://github.com/ZhengPeng7/CSRNet-Keras/releases/tag/v1.0).
 
 ### Dataset:
 
