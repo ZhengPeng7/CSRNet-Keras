@@ -1,5 +1,5 @@
 # CSRNet-Keras
-> Unofficial implementation of CSRNet for crowd counting in Keras.
+> An unofficial implementation of CSRNet for crowd counting in Keras-Tensorflow.
 
 ---
 
@@ -9,10 +9,10 @@
 
 ### Results now:
 
-| Dataset | MAE    | RMSE    | Sum of Frobenius Norm | MAPE  | PSNR  | SSIM |
-| :-----: | :----: | :-----: | :-------------------: | :---: | :---: | :--: |
-|   SHB   | 8.31   | 14.36   |        5.26e-2        | 6.63% | 29.31 | 0.93 |
-|   SHB   | 71.238 | 114.748 |        8.65e-1        | 17.3% | 21.46 | 0.61 |
+| Dataset |  MAE  |  RMSE  | Sum of Frobenius Norm |  MAPE  | PSNR  | SSIM |
+| :-----: | :---: | :----: | :-------------------: | :----: | :---: | :--: |
+|   SHB   | 8.31  | 14.36  |        5.26e-2        | 6.63%  | 29.31 | 0.93 |
+|   SHB   | 67.98 | 103.24 |        8.38e-1        | 17.29% | 21.51 | 0.60 |
 > Weights can be downloaded in the [release](https://github.com/ZhengPeng7/CSRNet-Keras/releases/tag/v0.9).
 
 ### Dataset:
@@ -29,13 +29,23 @@
 
 4. *Data augmentation*: Flip horizontally online randomly;
 
-7. *Weights*: Got best weights of SHB in epoch135(250 epochs in total), and here is the loss records:
+5. *Weights*: Got best weights of SHB in epoch 135, the best one of SHA in epoch 127, and here is the loss records:
 
-   ![Loss_records](materials/CSRNet_val_loss.png)
+   + SHA:
 
-8. *Prediction example*:
+   ![Loss_records_SHB](weights_A_MSE_bestMAE67.984_Thu-May-23/CSRNet_val_loss.png)
 
-   ![example](materials/raw-GT-pred.png)
+   + SHB:
+
+   ![Loss_records_SHB](weights_B_MSE_bestMAE8.31_Sun-May-19/CSRNet_val_loss.png)
+
+   
+
+6. *Prediction example*:
+
+   ![example](materials/raw-GT-pred-SHA.png)
+
+   ![example](materials/raw-GT-pred-SHB.png)
 
 ### Run:
 
